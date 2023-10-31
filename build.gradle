@@ -14,9 +14,14 @@ repositories {
 
 dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  implementation 'org.postgresql:postgresql:42.2.27'
+  implementation 'org.projectlombok:lombok:1.18.22'
+  implementation 'javax.validation:validation-api:2.0.1.Final'
+  implementation 'org.hibernate.validator:hibernate-validator:6.2.0.Final'
   testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+    exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+  }
   developmentOnly 'org.springframework.boot:spring-boot-devtools'
   testImplementation('org.mockito:mockito-core')
 }

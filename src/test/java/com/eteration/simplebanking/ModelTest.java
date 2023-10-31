@@ -6,14 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.eteration.simplebanking.model.Account;
 import com.eteration.simplebanking.model.DepositTransaction;
-import com.eteration.simplebanking.model.InsufficientBalanceException;
+import com.eteration.simplebanking.controller.exception.InsufficientBalanceException;
 import com.eteration.simplebanking.model.WithdrawalTransaction;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ModelTest {
-	
+
 	@Test
 	public void testCreateAccountAndSetBalance0() {
 		Account account = new Account("Kerem Karaca", "17892");
@@ -44,10 +44,10 @@ public class ModelTest {
 			Account account = new Account("Demet Demircan", "9834");
 			account.deposit(100);
 			account.withdraw(500);
-		  });
+		});
 
 	}
-	
+
 	@Test
 	public void testTransactions() throws InsufficientBalanceException {
 		// Create account
